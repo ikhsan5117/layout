@@ -45,7 +45,7 @@ class kuis1 extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors:[ Colors.purple, Colors.purpleAccent]
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(25)),
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10), topLeft: Radius.circular(10), topRight: Radius.circular(120))
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start, 
@@ -61,6 +61,10 @@ class kuis1 extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start, 
                     children: [Text("And Glutes Workout", style: TextStyle(color: Colors.white, fontSize: 25), )],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end, 
+                    children: [Text("⏲ 60 min", style: TextStyle(color: Colors.white, fontSize: 15, ), )],
                   )
                 ],
               ),
