@@ -9,6 +9,19 @@ class kuis1 extends StatelessWidget {
       appBar: AppBar(
         title: Text("tugas kuis"),
       ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+              Text(
+                  "Treaning",
+                style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+              Text("<🥶>")
+                ],
+              ),
     );
   }
 }
