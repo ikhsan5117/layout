@@ -40,12 +40,32 @@ class kuis1 extends StatelessWidget {
                 ],
               ),
               Container(
-              width: 255,
-              height: 150,
+              width: 350,
+              height: 185,
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors:[ Colors.purple, Colors.purpleAccent])
+                gradient: LinearGradient(colors:[ Colors.purple, Colors.purpleAccent]
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(25)),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start, 
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start, 
+                    children: [Text("Next work out", style: TextStyle(color: Colors.white),)],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start, 
+                    children: [Text("Lets toning", style: TextStyle(color: Colors.white, fontSize: 20), )],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start, 
+                    children: [Text("And Glutes Workout", style: TextStyle(color: Colors.white, fontSize: 25), )],
+                  )
+                ],
               ),
             ),
+
           ],
       ),
     );
