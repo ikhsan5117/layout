@@ -57,8 +57,7 @@ class Layout2 extends StatelessWidget {
           ),
         ),
         Positioned(right: -160, bottom: -15,
-        child: Image.asset(
-        "Gambar/02.png",
+        child: Image.asset("Gambar/02.png",
          width: 300,
          height: 300,
           ),
