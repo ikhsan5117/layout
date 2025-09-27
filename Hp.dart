@@ -110,21 +110,24 @@ class kuis1 extends StatelessWidget {
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              Stack(
+                                clipBehavior: Clip.none,
                                 children: [
                                     Image.asset("Gambar/card.jpg",
-                                      width: 180,
+                                      width: 290,
                                     ),
-                                    Positioned(right: 20, bottom: 15,
-                                    Image.asset("Gambar/figure.png",
-                                  width: 50,
-                                  height: 50,
-                                ),
-                                    ),
-                                  ],
-                                ),
-                              
+                                           Positioned(
+                                            right: 185,
+                                            bottom: -10,
+                                            child: Image.asset(
+                                              "Gambar/figure.png",
+                                              width: 100,
+                                              height: 100,
+                                            
+                                            ),
+                                          ),
+                                        ],
+                                      ),
 
                               const SizedBox(width: 12),
                               Expanded(
@@ -140,14 +143,13 @@ class kuis1 extends StatelessWidget {
                                     Text("nstick to your plan", style: TextStyle(fontSize: 12, color: Colors.black54),),
                                   ],
                                 ),
-                                ),    
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
-                    )
-                ],
-        
-            ),
-      ),
+                  ),
     );
   }
 }
