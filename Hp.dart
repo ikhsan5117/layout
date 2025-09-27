@@ -9,22 +9,24 @@ class kuis1 extends StatelessWidget {
       appBar: AppBar(
         title: Text("tugas kuis"),
       ),
-      body: Column(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 15),
+        child: Column(
         children: [  
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
               Text(
-                  "Treaning",
+                  "Training",
                 style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-              Text("<🥶>"),
+                  Text("< 🗓 >"), 
                 ],
               ),
-
+        const SizedBox(height: 12),
 
         Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,38 +41,62 @@ class kuis1 extends StatelessWidget {
               Text("Details>",style: TextStyle(color: Colors.blue),),
                 ],
               ),
+              const SizedBox(height: 12),
+
               Container(
-              width: 350,
+              width: double.infinity,
               height: 185,
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors:[ Colors.purple, Colors.purpleAccent]
+                gradient: LinearGradient(colors:[ Colors.deepPurple, Colors.purpleAccent],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
                 ),
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10), topLeft: Radius.circular(10), topRight: Radius.circular(120))
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), topRight: Radius.circular(120))
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start, 
+              child: Stack(
+                
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start, 
-                    children: [Text("Next work out", style: TextStyle(color: Colors.white),)],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start, 
-                    children: [Text("Lets toning", style: TextStyle(color: Colors.white, fontSize: 20), )],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start, 
-                    children: [Text("And Glutes Workout", style: TextStyle(color: Colors.white, fontSize: 25), )],
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end, 
-                    children: [Text("⏲ 60 min", style: TextStyle(color: Colors.white, fontSize: 15, ), )],
+                  Expanded(
+                    child: Padding(padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Next Workout", style: TextStyle(color: Colors.white, fontSize: 10),),
+                        SizedBox(height: 6),
+                        Text("Lets Toning", style: TextStyle(color: Colors.white, fontSize: 20),),
+                        SizedBox(height: 2),
+                        Text("and Glutes Workout", style: TextStyle(color: Colors.white, fontSize: 25),),
+                        SizedBox(height: 45),
+                        Text("⏱ 60 min", style: TextStyle(color: Colors.white, fontSize: 15),),
+                        SizedBox(height: 0.10),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: 2, right: 1),
+                            child: Container(
+                            width: 10,
+                            height: 10,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
+                        ),
+                      ],
+                      
+                    ),
+                    
+                    
+                    )
                   )
                 ],
               ),
             ),
+        
 
           ],
+        ),
       ),
     );
   }
