@@ -56,8 +56,8 @@ class kuis1 extends StatelessWidget {
               child: Stack(
                 
                 children: [
-                  Expanded(
-                    child: Padding(padding: EdgeInsets.all(16),
+                  Padding(
+                    padding: EdgeInsets.all(16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -66,37 +66,31 @@ class kuis1 extends StatelessWidget {
                         Text("Lets Toning", style: TextStyle(color: Colors.white, fontSize: 20),),
                         SizedBox(height: 2),
                         Text("and Glutes Workout", style: TextStyle(color: Colors.white, fontSize: 25),),
-                        SizedBox(height: 45),
+                        SizedBox(height: 40),
                         Text("⏱ 60 min", style: TextStyle(color: Colors.white, fontSize: 15),),
-                        SizedBox(height: 0.10),
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: Padding(
-                            padding: EdgeInsets.only(bottom: 2, right: 1),
-                            child: Container(
-                            width: 10,
-                            height: 10,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                        ),
                       ],
-                      
+                      ),
+                      ),
+                        
+                        
+                          Positioned(
+                            right: 16,
+                            top: 135,
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                                ),
+                              child: Icon(Icons.play_arrow, size: 15,), 
+                              ),
+                          ),
+                      ],
                     ),
-                    
-                    
                     )
-                  )
                 ],
-              ),
             ),
-        
-
-          ],
-        ),
       ),
     );
   }
