@@ -53,8 +53,8 @@ class kuis1 extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), topRight: Radius.circular(120))
               ),
-              child: Stack(
-                
+
+              child: Stack(               
                 children: [
                   Padding(
                     padding: EdgeInsets.all(16),
@@ -86,10 +86,66 @@ class kuis1 extends StatelessWidget {
                               child: Icon(Icons.play_arrow, size: 15,), 
                               ),
                           ),
+                        ],
+                      ),
+                  ),
+
+                          const SizedBox(height: 16),
+
+                          Container(
+                            width: double.infinity,
+                            height: 120,
+                            padding: EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: const Color.fromARGB(255, 111, 7, 7).withAlpha(10),
+                                  blurRadius: 6,
+                                ),
+                              ]
+                            ),
+
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                    Image.asset("Gambar/card.jpg",
+                                      width: 180,
+                                    ),
+                                    Positioned(right: 20, bottom: 15,
+                                    Image.asset("Gambar/figure.png",
+                                  width: 50,
+                                  height: 50,
+                                ),
+                                    ),
+                                  ],
+                                ),
+                              
+
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("You are doing great", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue
+                                    ),
+                                    ),
+                                    SizedBox(height: 4),
+                                    Text("keep it Up", style: TextStyle(fontSize: 12, color: Colors.black54),),
+                                    Text("nstick to your plan", style: TextStyle(fontSize: 12, color: Colors.black54),),
+                                  ],
+                                ),
+                                ),    
                       ],
                     ),
                     )
                 ],
+        
             ),
       ),
     );
